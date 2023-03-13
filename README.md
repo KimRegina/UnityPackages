@@ -1,5 +1,5 @@
-# fUnityTools
+# com.regina.unitypackages
 
-<img src="doc/luoxiaohei.png" width="15%">
+<img src="doc/rock_luoxiaohei.png" width="15%">
 
-    这是fUnityTools 开发分支
+    unity packages 管理&开发仓库

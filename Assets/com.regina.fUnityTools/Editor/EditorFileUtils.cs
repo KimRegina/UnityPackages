@@ -145,9 +145,14 @@ namespace com.regina.fUnityTools.Editor
         /// <returns></returns>
         public static string[] GetLabels(string assetPath)
         {
+#if UNITY_2019
+            UnityEngine.Object asset = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(assetPath);
+            return AssetDatabase.GetLabels(asset);
+#else
             GUID guid = AssetDatabase.GUIDFromAssetPath(assetPath);
             if (guid.Empty()) return Array.Empty<string>();
             return AssetDatabase.GetLabels(guid);
+#endif
         }
 
         /// <summary>
